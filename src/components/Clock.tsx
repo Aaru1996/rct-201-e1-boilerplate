@@ -1,25 +1,35 @@
 import React from "react";
+import { useState } from "react";
+import useClock from "../hooks/useClock";
 
 type Props = {
-  //  TODO
+    
 };
 
 const Clock = (props: Props) => {
+  
+    const {hours, minutes, second} =useClock()
+   
+   
   return (
     <div data-testid="clock">
       <h4 data-testid="clock-label">
-        {/* Label */}
+        24 hours Live custom component Clock
       </h4>
+     
       <span data-testid="clock-hours">
-        {/* Hours */}
+       
+        {hours}
         </span>
         :
       <span data-testid="clock-minutes">
-        {/* Minutes */}
+        
+        {minutes}
       </span>
        :
       <span data-testid="clock-seconds">
-        {/* Seconds */}
+       
+        {second}
         </span>
     </div>
   );
